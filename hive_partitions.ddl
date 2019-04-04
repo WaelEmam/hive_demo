@@ -2,9 +2,9 @@ drop database if exists stg_airline cascade;
 create database stg_airline;
 use stg_airline;
 
-DROP TABLE IF EXISTS stg_airline.onTimePerf
+DROP TABLE IF EXISTS stg_airline.onTimePerf;
 
-create table stg_airline.onTimePerf
+create external table stg_airline.onTimePerf
 (Year INT ,
 Month INT ,
 DayofMonth INT ,
@@ -37,14 +37,14 @@ LateAircraftDelay STRING)
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
 STORED AS TEXTFILE;
 
-LOCATION '/user/erwin/stg_airline/onTimePerf/2008.csv'
+LOCATION '/user/erwin/stg_airline/onTimePerf'
 
 drop database if exists airline cascade;
 
 create database airline;
 use airline;
 
-DROP TABLE IF EXISTS airline.onTimePerf
+DROP TABLE IF EXISTS airline.onTimePerf;
 
 create table airline.onTimePerf
 (DayofMonth INT ,
