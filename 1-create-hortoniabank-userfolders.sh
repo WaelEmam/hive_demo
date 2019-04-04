@@ -27,6 +27,7 @@ hdfs dfs -mkdir -p /user/erwin/hortoniabank_data/eu_countries
 hdfs dfs -mkdir -p /user/erwin/hortoniabank_data/tax_2015
 hdfs dfs -mkdir -p /user/erwin/hortoniabank_data/claim_savings
 hdfs dfs -mkdir -p /user/erwin/hortoniabank_data/provider_summary
+hdfs dfs -mkdir -p /user/erwin/stg_airline/onTimePerf
 
 hdfs dfs -put /tmp/Data/us_customers_data.csv /user/erwin/hortoniabank_data/us_customers
 hdfs dfs -put /tmp/Data/ww_customers_data.csv /user/erwin/hortoniabank_data/ww_customers
@@ -34,5 +35,8 @@ hdfs dfs -put /tmp/Data/eu_countries.csv /user/erwin/hortoniabank_data/eu_countr
 hdfs dfs -put /tmp/Data/tax_2015.csv /user/erwin/hortoniabank_data/tax_2015
 hdfs dfs -put /tmp/Data/claim_savings.csv /user/erwin/hortoniabank_data/claim_savings
 hdfs dfs -put /tmp/Data/claims_provider_summary_data.csv /user/erwin/hortoniabank_data/provider_summary
+hdfs dfs -put /tmp/Data/2008.csv /user/erwin/stg_airline/onTimePerf/
 hdfs dfs -chown -R erwin:hadoop /user/erwin/hortoniabank_data
 hdfs dfs -chmod -R g+wX /user/erwin/hortoniabank_data
+hdfs dfs -chown -R erwin:hadoop /user/erwin/stg_airline
+hdfs dfs -chmod -R g+wX /user/erwin/stg_airline
