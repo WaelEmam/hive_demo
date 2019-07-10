@@ -35,9 +35,8 @@ NASDelay STRING ,
 SecurityDelay STRING ,
 LateAircraftDelay STRING)
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
-STORED AS TEXTFILE;
-
-LOCATION '/user/erwin/stg_airline/onTimePerf'
+STORED AS TEXTFILE
+LOCATION '/user/erwin/stg_airline/onTimePerf';
 
 drop database if exists airline cascade;
 
